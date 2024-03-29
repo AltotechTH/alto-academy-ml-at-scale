@@ -29,7 +29,14 @@ docker rmi app-image
 
 ## Commands for running Docker Compose
 ```bash
+# Build and run the Docker containers
 docker-compose up --build -d
+
+# List the Docker containers
+docker ps
+
+# Stop the Docker containers
+docker-compose down
 ```
 
 

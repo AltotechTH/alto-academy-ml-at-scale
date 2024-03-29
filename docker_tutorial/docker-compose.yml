@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  flask-server:
+    build:  # build from Dockerfile
+      context: .
+      dockerfile: Dockerfile
+    container_name: flask-server
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    volumes:
+      - $PWD:/app
+    networks:
+      - internal
+
+networks:
+  internal:
+    name: internal
